@@ -1,0 +1,64 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: cfc2d7a8b9d7fbb6ec08f91d76aa9d2a31346b4dfc11a469bb1462700a8bf68b
+
+name:           goodyaml
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/githubuser/goodyaml#readme>
+homepage:       https://github.com/githubuser/goodyaml#readme
+bug-reports:    https://github.com/githubuser/goodyaml/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/goodyaml
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5,
+      bytestring,
+      text
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_goodyaml
+  default-language: Haskell2010
+
+executable goodyaml-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , goodyaml
+  other-modules:
+      Paths_goodyaml
+  default-language: Haskell2010
+
+test-suite goodyaml-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , goodyaml
+  other-modules:
+      Paths_goodyaml
+  default-language: Haskell2010
